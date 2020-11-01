@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&family=Roboto+Slab:wght@500&display=swap');
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+
+/**no poner position si queres escrolear en la pagina*/
+
+a {
+    text-decoration: none;
+    display: inline;
+    color: black;
+}
+
+.home-body {
+    position: fixed;
+    /** si es fixed no se puede escrolear*/
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+header {
+    width: 100%;
+    height: 140px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+header .header-icons-container {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    background-color: #47cfac;
+}
+
+header .header-icons-container .icons {
+    width: 300px;
+    height: auto;
+    /**tan grande como su padre*/
+    display: flex;
+    justify-items: flex-end;
+    /**mando los elementos a la derecha*/
+    align-items: center;
+    /** centrar contenido respecto x del contenedor**/
+    justify-content: space-between;
+    /**darle  1 espacio*/
+    justify-self: end;
+    /**mando los elementos a la derecha*/
+    margin-right: 50px;
+    /**para que no quede  pegado al lado derecho*/
+}
+
+header .icons a {
+    color: white;
+}
+
+#instagram {
+    width: 50px;
+    height: 50px;
+}
+
+#facebook {
+    width: 50px;
+    height: 50px;
+}
+
+#linkedin {
+    width: 50px;
+    height: 50px;
+}
+
+#twitter {
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /** 2 columnas con ese ancho*/
+    height: 90px;
+}
+
+nav .nav-logo-container {
+    margin-left: 50px;
+}
+
+nav .profile-link {
+    display: flex;
+    align-items: center;
+    /**alinear items al centro*/
+    justify-content: flex-end;
+    /** justificar al final (derecho)**/
+    margin-right: 50px;
+    /**para que no quede pegado del lado derecho*/
+}
+
+nav .nav-logo-container img {
+    width: 220px;
+    margin-top: 10px;
+}
+
+nav .profile-link a {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.home-main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    /**crear 3 columnas con determinado ancho*/
+    height: 100%;
+    background-image: url('../IMAGENES/astronauta.png');
+    background-position: center;
+    /***para que se centre la imagen*/
+    background-repeat: no-repeat;
+    /**para que no se repita*/
+    background-size: cover;
+    /***para que se adapte al fondo sin estirarse*/
+}
+
+.home-main section {
+    display: grid;
+    grid-column: 2;
+    justify-items: center;
+    /* justificar items o etiquetas  al centro**/
+    height: 350px;
+    margin-top: 80px;
+}
+
+.home-main-text {
+    font-family: 'Roboto mono', monospace;
+    /*haciendo import desde google font**/
+    font-size: 30px;
+    /**como si fuera un titulo*/
+    font-weight: 700px;
+    /**ancho de fuente**/
+    letter-spacing: 10px;
+    /**espacio entre las letras**/
+    text-align: center;
+    color: white;
+}
+
+.home-main-button {
+    width: 110px;
+    height: 50px;
+    background-color: #47cfac;
+    display: grid;
+    align-items: center;
+}
+
+.home-main-button a {
+    font-weight: 900;
+    /*especifica el peso o grueso de la letra no va con px ni nada de eso*/
+    font-size: 18px;
+    /** tamaño de la letra**/
+}
+
+
+/* pagina 2  blogs**/
+
+.blogs-main {
+    display: grid;
+}
+
+.blogs-news-container {
+    background-color: #e6e9ed;
+    padding: 0 50px 40px;
+    /**espacio interno**/
+    /***margin: ; distancia entre contenidos **/
+}
+
+.blogs-main-new {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr;
+}
+
+.blogs-news-img-container {
+    grid-column: 1;
+    /**en que columna posicionarse de la columna generada*/
+}
+
+.blogs-news-img-container img {
+    width: 85%;
+    /**90% del grid*/
+}
+
+.blogs-news-info-container {
+    grid-column: 2;
+    /**en que columna posicionarse de la columna generada*/
+}
+
+.blogs-news-info-container p {
+    margin-bottom: 35px;
+}
+
+.blogs-posts-container {
+    padding: 0 50px 40px;
+}
+
+.blogs-posts-container h3 {
+    border-bottom: 1px solid #cdd2da;
+    padding-bottom: 20px;
+    text-align: center;
+    /** esta clase es la linea separadora*/
+}
+
+.blogs-button {
+    border: 1px solid #47cfac;
+    padding: 10px 15px;
+    /**arriba abajo -  izquierda derecha*/
+    font-size: 12px;
+}
+
+.blogs-posts-container .post-container {
+    display: inline-block;
+    /**para que se pueda poner horizontal article por default es display:block*/
+    padding-left: 10px;
+    max-width: 30%;
+    margin-bottom: 50px;
+}
+
+.blogs-posts-container .post-container {
+    margin-bottom: 35px;
+}
+
+.blogs-posts-container .post-container img {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #22272d;
+    border-top: 35px solid #47cfac;
+    /**para hacer el borde verde*/
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    margin-top: 30px;
+}
+
+
+/***pagina 3 blog*/
+
+.blogpost-img-container {
+    padding: 0px 50px 40px;
+}
+
+.blogpost-img-container img {
+    width: 100%
+}
+
+.blogpost-main-container {
+    padding: 0px 50px 40px;
+}
+
+.blogpost-main-container h3 {
+    border-bottom: 1px solid #cdd2da;
+    padding-bottom: 20px;
+    /**distancia a la linea*/
+}
+
+.blogpost-main-container article h1 {
+    font-size: 35px;
+}
+
+.contact-main-container {
+    width: 100%;
+    min-height: 250px;
+    background-color: #e6e9ed;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contact-main-container div {
+    display: inline-block;
+    width: 49.5%;
+    height: 100%;
+}
+
+.contact-main-container div a {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.contact-main-container .contact-left .contact-right {
+    text-align: initial;
+    margin-top: 85px;
+}
+
+.contact-main-container img {
+    width: 100px;
+}
+
+
+/***pagina 4*/
+
+.profile-main-container {
+    padding: 70px 40px;
+    background-color: #e6e9ed;
+    margin-bottom: 50px;
+}
+
+.profile-main-container img {
+    width: 320px;
+    height: 300px;
+    margin-right: 30px;
+}
+
+.profile-main-container .profile-container {
+    display: flex;
+}
+
+.profile-main-proyects {
+    padding: 0 50px 40px;
+}
+
+.profile-main-proyects h3 {
+    border-bottom: 1px solid #cdd2da;
+    /**linea separadora*/
+    padding-bottom: 35px;
+    text-align: center;
+}
+
+.proyects-main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.proyect-container {
+    padding: 0 5px;
+}
+
+.git {
+    color: blue;
+}
+
+.blogs-post-container-img {
+    width: 300px;
+    height: 300px;
+}
+
+
+/*****pagina 5 contacto**/
+
+.contacto-formulario-elementos {
+    margin-left: 200px;
+}
+
+.contacto-formulario-input {
+    margin-left: 200px;
+    width: 200px;
+}
+
+.contacto-formulario-label {
+    margin-left: 200px;
+}
+
+#contacto-formulario-enviar {
+    margin-left: 200px;
+    width: 205px;
+    height: 50px;
+    color: #2AEB4D;
+    background-color: #9F2BE7;
+}
